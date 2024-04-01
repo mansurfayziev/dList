@@ -6,7 +6,7 @@ from .models import Dict
 def home(request):
     if request.method=='POST':
         text = request.POST['text']
-        print(text)
+
         try:
             response = requests.get('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=' + text)
             trans_text = response.json()[0][0][0]
