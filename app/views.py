@@ -24,3 +24,12 @@ def home(request):
         'dicts': dicts
     }
     return render(request, 'app/home.html',contex)
+
+
+def delete(request, pk):
+    try:
+        d = Dict.objects.get(pk=pk)
+        d.delete()
+    except:
+        pass
+    return redirect('home')

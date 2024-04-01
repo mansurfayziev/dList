@@ -10,6 +10,7 @@
   </head>
 
   <body>
+  <div class="s" id="top"></div>
   <div class="container">
   <div class="mx-2"><div class="bg-primary mx-auto py-1 fs-5 text-center text-white  shadow-sm mt-2" style="
   width:60px;
@@ -20,8 +21,8 @@
     <div class="col-md-6 mx-auto mt-2">
       <form method="post" action="." class="text-end">
     {% csrf_token %}
-        <input name="text" class="mb-2 p-2" style="width:100%;" role="textbox" placeholder="Введите слово на английском" id="inputText">
-          <span class=" mr-2 p-2 rounded shadow-sm" id="output"></span>
+        <input name="text" class="mb-2 p-2 fs-5 " style="width:100%;" role="textbox" placeholder="Введите слово на английском" id="inputText">
+          <span class=" mr-2 p-2 rounded shadow-sm" id="output" ></span>
 
         <button type="button" onclick="
     var inputText = document.getElementById('inputText').value;
@@ -44,6 +45,7 @@
 </div>
     </div>
     {% block content %}{% endblock %}
+    <a href="#top"  class=""><h1 class="text-center mt-5 fs-6">На верх</h1></a>
   <div class="text-center text-muted mb-3" style="font-size:80%;">используется Google Translate</div>
 
 <script>
