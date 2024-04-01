@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container col-md-4">
+    {% if dicts %}
+        {% for dict in dicts %}
+        <div class="row bg-light shadow mt-3 rounded m-2 py-2">
+            <div>{{dict.eng}}</div>
+            <div>{{dict.rus}}</div>
+        </div>
+        {% endfor %}
+    {% else %}
+    <h5 class="text-center text-muted my-5">Список пуст :(</h5>
+    {% endif %}
+</div>
+{% endblock %}
