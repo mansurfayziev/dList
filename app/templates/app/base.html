@@ -31,7 +31,7 @@
         .then(response => response.json())
         .then(data => {
             document.getElementById('output').innerText = data[0][0][0];
-            alert(translatedText);
+            alert(translatedText);    
         })
         .catch(error => {
             console.error('Ошибка:', error);
@@ -40,7 +40,6 @@
           <button type="submit" class="btn btn-primary">Добавить</button>
 
 </form>
-
     </div>
 </div>
     </div>
