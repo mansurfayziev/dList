@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 import requests
 
@@ -21,7 +22,8 @@ def home(request):
     dicts = Dict.objects.all()[::-1]
 
     contex={
-        'dicts': dicts
+        'dicts': dicts,
+        'len':len(dicts)
     }
     return render(request, 'app/home.html',contex)
 
