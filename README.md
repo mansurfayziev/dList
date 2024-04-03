@@ -1,3 +1,4 @@
 # dList
-dList -  website for learning English words
-See https://dlist.pythonanywhere.com/
+<b>dList</b> -  website for learning English words.<br>
+See🙈 https://dlist.pythonanywhere.com/
+
